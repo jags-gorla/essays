@@ -352,6 +352,17 @@
     font-size: 0.72rem; line-height: 1.7; color: var(--muted); text-align: center;
   }
   .colophon .rule { display: inline-block; margin: 0 0.5em; color: var(--muted-soft); }
+
+  .skip-note {
+    margin: 1.1rem 0 0; font-size: 0.9rem; font-style: italic;
+    color: var(--muted); line-height: 1.5;
+  }
+  .skip-note a {
+    color: var(--muted); text-decoration: none;
+    border-bottom: 1px solid var(--poster-red); padding-bottom: 1px;
+  }
+  .skip-note a:hover { color: var(--poster-red); }
+  #notes { scroll-margin-top: 2rem; }
 </style>
 
 <div class="page">
@@ -360,6 +371,7 @@
     <div class="eyebrow">Field Notes · Entrepreneurship · <time datetime="2026-08">August 2026</time></div>
     <h1 class="title">How I Stopped Worrying and Learned to Love Coding Agents</h1>
     <p class="subtitle">Trusting them was one decision. Nine months later, an autonomous fleet makes ~half a million irreversible, consequential decisions every hour.</p>
+    <p class="skip-note">If you’re here for the work rather than the backstory, <a href="#notes">start here</a>.</p>
   </header>
 
   <figure class="hero">
@@ -371,9 +383,9 @@
 
     <p class="lede"><em>“Everybody’s got a plan until they get punched in the mouth,”</em> as the great Mike Tyson once said. The unknown unknowns are what get you. They are also, often, a recipe for serendipitous discovery — and I’d argue a necessity for any adventure.</p>
 
-    <p>Fourteen years ago today, I had a front-row seat to see how the entire <a href="https://arxiv.org/abs/1309.6786">Xbox recommender system</a> was built on state-of-the-art ML research. Managed and evolved by a lean team of ~12 engineers and researchers across Tel Aviv and Cambridge (England, the original one), it ran on the emerging foundation of what we now call cloud infrastructure.</p>
+    <p>Fourteen years ago, I had a front-row seat as ~12 engineers and researchers across Tel Aviv and Cambridge (England, the original one) built and ran the entire <a href="https://arxiv.org/abs/1309.6786">Xbox recommender system</a> — state-of-the-art ML research on the emerging foundation of what we now call cloud infrastructure.</p>
 
-    <p>That experience gave me a blind—perhaps naive—confidence to step into entrepreneurship within months: delivering state-of-the-art ML models as cloud services for content discovery and consumer insight. What followed was half a decade of 0-to-1 product bets—often right product, wrong time—that ultimately converged into enterprise <a href="https://medium.com/@jgorla/an-eventual-next-step-e0ff0daa3b75#:~:text=What%20are%20we%20trying%20to%20solve%2C%20anyway%3F">knowledge work automation</a> as a service, before Transformers and LLMs arrived.</p>
+    <p>That gave me a blind — perhaps naive — confidence to step into entrepreneurship within months, delivering the same class of models as cloud services for content discovery and consumer insight. Half a decade of 0-to-1 product bets followed — often right product, wrong time — converging into enterprise <a href="https://medium.com/@jgorla/an-eventual-next-step-e0ff0daa3b75#:~:text=What%20are%20we%20trying%20to%20solve%2C%20anyway%3F">knowledge work automation</a> as a service, before Transformers and LLMs arrived.</p>
 
     <p>At the centre of all this were two parallel threads that worked (for me):</p>
 
@@ -384,20 +396,20 @@
 
     <h2>So, what does all of this have to do with coding agents?</h2>
 
-    <p>Nine months ago, I arrived at another crossroads. I was working alongside brilliant engineers at Meta, immersed in infrastructure serving half the planet—systems I’d spent years studying by crossing divisions and pushing well beyond my day-to-day role, in the name of the quest for knowledge 🙂. Amidst this, I watched autonomous agents take centre stage outside, realising that the <a href="https://medium.com/@jgorla/an-eventual-next-step-e0ff0daa3b75#:~:text=What%20are%20we%20trying%20to%20solve%2C%20anyway%3F">automation vision</a> I set out to build back in 2018 was finally becoming a reality due to further advances in AI/Infra.</p>
+    <p>Nine months ago I was at Meta, alongside brilliant engineers, immersed in infrastructure serving half the planet. I’d spent years studying those systems, crossing divisions and pushing well beyond my day-to-day role, in the name of the quest for knowledge 🙂. Then autonomous agents took centre stage outside, and the <a href="https://medium.com/@jgorla/an-eventual-next-step-e0ff0daa3b75#:~:text=What%20are%20we%20trying%20to%20solve%2C%20anyway%3F">automation vision</a> I set out to build in 2018 was finally within reach, on the back of advances in AI and infrastructure. A close friend at Meta urged me to experiment with early coding agents to see if I could reignite a long-shelved entrepreneurial dream.</p>
 
-    <p>A close friend at Meta urged me to experiment with early coding agents to see if I could reignite a long-shelved entrepreneurial dream once again! I began testing Codex and Claude back when simply refactoring a monolith was a coin toss. Today, those same systems have helped me generate nearly a million lines of code across three languages, design and develop complex systems and manage an autonomous fleet executing millions of high-stakes decisions a day. However, it required the same mindset — a willingness to risk failure in critical production systems being built with agents. They did fail at times, and it was painful.</p>
+    <p>I began testing Codex and Claude back when simply refactoring a monolith was a coin toss. Today, those same systems have helped me generate nearly a million lines of code across three languages, design and develop complex systems and manage an autonomous fleet executing millions of high-stakes decisions a day. All of it required the same mindset — a willingness to risk failure in critical production systems being built with agents. They did fail at times, and it was painful.</p>
 
-    <p><strong>These are my field notes on surrendering control, learning to trust coding agents, and some learnings and frustrations on how I put them to work.</strong></p>
+    <p><strong>These are my field notes on surrendering control, learning to trust coding agents, and the lessons and frustrations of putting them to work.</strong></p>
 
     <blockquote class="aside-quote">As a side outcome, the only two Achievement badges I earned on GitHub after all this are “Pair Extraordinaire” and “YOLO” — a testament to my blind trust today. Or, one might say, to sheer ignorance 🙂</blockquote>
 
     <figure class="fig-inline">
-      <img src="github.webp" loading="lazy" decoding="async" alt="A GitHub profile page. The Achievements panel, highlighted in blue, shows exactly two badges: Pair Extraordinaire and YOLO. The activity overview reads 98% commits, 2% pull requests." width="1600" height="926">
+      <img src="github.webp" alt="A GitHub profile page. The Achievements panel, highlighted in blue, shows exactly two badges: Pair Extraordinaire and YOLO. The activity overview reads 98% commits, 2% pull requests." width="1600" height="926">
       <figcaption>Co-authored commits, and merged without review. Nine months, scored by GitHub.</figcaption>
     </figure>
 
-    <hr class="sec-break">
+    <hr class="sec-break" id="notes">
 
     <p>Building a product is a loop: What, Why, How. How good your direction is depends on how well you know the ground — what VCs call founder-market fit. And the loop keeps surfacing problems nobody knew were there, so what you ship is never what you planned. What started as using coding agents to answer How — how to generate the code — quickly became indispensable for deciding what to build and why.</p>
 
@@ -435,7 +447,7 @@
     <p>The agents took over, and producing code stopped being the constraint; specifying became it. I spent my days describing rather than typing, only to discover how imprecise my descriptions had always been. Every ambiguity I used to resolve silently while coding now returned as software built exactly as stated, but not at all as meant.</p>
 
     <figure class="fig-inline">
-      <img src="fig-instructions.webp" loading="lazy" decoding="async" alt="Horizontal bar chart. Questions 50.9 percent, directives 28.2 percent, demands to verify or review 10.3 percent, assent 6.8 percent, corrections 3.8 percent." width="2480" height="534">
+      <img src="fig-instructions.webp" alt="Horizontal bar chart. Questions 50.9 percent, directives 28.2 percent, demands to verify or review 10.3 percent, assent 6.8 percent, corrections 3.8 percent." width="2480" height="534">
       <figcaption>How I actually interacted with the agents. Over half were questions — the agent a proxy for a junior engineer, me operating as the senior one.</figcaption>
     </figure>
 
@@ -459,7 +471,7 @@
     <p>I handed it a hypothesis and got back a properly constructed experiment — walk-forward splits, out-of-sample validation, sensitivity sweeps across dozens of configurations. Work I would have done eventually, in a worse version, across fewer variants, and much later.</p>
 
     <figure class="fig-inline">
-      <img src="fig-parallel.webp" loading="lazy" decoding="async" alt="Parallel investigations per session, sorted: a long flat run then a sharp climb to 414." width="2360" height="800">
+      <img src="fig-parallel.webp" alt="Parallel investigations per session, sorted: a long flat run then a sharp climb to 414." width="2360" height="800">
       <figcaption>What research breadth actually looks like. Most sessions delegated a handful of parallel investigations; one ran 414 at once.</figcaption>
     </figure>
 
@@ -479,7 +491,7 @@
     <p>An unknown unknown is not an item on a list. It is something that has been true in production for weeks or months, producing output that is wrong but not obviously wrong, and would have gone on producing it until either something broke loudly enough to force a look, or somebody asked a question orthogonal enough to expose it.</p>
 
     <figure class="fig-inline">
-      <img src="fig-defects.webp" loading="lazy" decoding="async" alt="Timeline of when each silent defect was found; ten of sixteen cluster into four weeks." width="2360" height="544">
+      <img src="fig-defects.webp" alt="Timeline of when each silent defect was found; ten of sixteen cluster into four weeks." width="2360" height="544">
       <figcaption>When each silent defect was found — not when it started. Every one had been true in production for weeks or months. Ten of the sixteen surfaced in a single four-week stretch, once looking became cheap. The sixteenth is still open.</figcaption>
     </figure>
 
@@ -495,7 +507,7 @@
       <span>why the rule is not active? I though we made it active yesterday</span>
     </div>
     <figure class="fig-inline">
-      <img src="fig-why.webp" loading="lazy" decoding="async" alt="Ninety-one squares, one per investigation: 33 dark red, 49 rose, 9 grey." width="2360" height="536">
+      <img src="fig-why.webp" alt="Ninety-one squares, one per investigation: 33 dark red, 49 rose, 9 grey." width="2360" height="536">
       <figcaption>Every investigation in the preserved sessions, and how each one started. All of them were opened by me, not by an agent — and nine in ten are a version of the same question.</figcaption>
     </figure>
 
@@ -544,4 +556,15 @@
 </div>
   <script data-goatcounter="https://jags.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
+  <script>
+    document.addEventListener('click', function (e) {
+      var el = e.target instanceof Element ? e.target : null;
+      var a = el && el.closest('a[href^="#"]');
+      if (!a) return;
+      var t = document.getElementById(a.getAttribute('href').slice(1));
+      if (!t) return;
+      e.preventDefault();
+      t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  </script>
 </html>
