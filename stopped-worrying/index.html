@@ -176,6 +176,11 @@
     color: var(--muted);
   }
   .body .verbatim span { display: block; }
+  .fig-inline.wide {
+    width: min(var(--wide), 94vw);
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
   .fig-inline {
     margin: 2.6rem 0 3rem;
     padding: 0;
@@ -490,7 +495,7 @@
 
     <p>The agents took over, and producing code stopped being the constraint; specifying became it. I spent my days describing rather than typing, only to discover how imprecise my descriptions had always been. Every ambiguity I used to resolve silently while coding now returned as software built exactly as stated, but not at all as meant.</p>
 
-    <figure class="fig-inline">
+    <figure class="fig-inline wide">
       <img src="fig-instructions.webp" alt="Horizontal bar chart. Questions 50.9 percent, directives 28.2 percent, demands to verify or review 10.3 percent, assent 6.8 percent, corrections 3.8 percent." width="2480" height="534">
       <figcaption>How I actually interacted with the agents. Over half were questions — the agent a proxy for a junior engineer, me operating as the senior one.</figcaption>
     </figure>
@@ -514,7 +519,7 @@
 
     <p>I handed it a hypothesis and got back a properly constructed experiment — walk-forward splits, out-of-sample validation, sensitivity sweeps across dozens of configurations. Work I would have done eventually, in a worse version, across fewer variants, and much later.</p>
 
-    <figure class="fig-inline">
+    <figure class="fig-inline wide">
       <img src="fig-parallel.webp" alt="Parallel investigations per session, sorted: a long flat run then a sharp climb to 414." width="2360" height="800">
       <figcaption>What research breadth actually looks like. Most sessions delegated a handful of parallel investigations; one ran 414 at once.</figcaption>
     </figure>
@@ -534,7 +539,7 @@
 
     <p>An unknown unknown is not an item on a list. It is something that has been true in production for weeks or months, producing output that is wrong but not obviously wrong, and would have gone on producing it until either something broke loudly enough to force a look, or somebody asked a question orthogonal enough to expose it.</p>
 
-    <figure class="fig-inline">
+    <figure class="fig-inline wide">
       <img src="fig-defects.webp" alt="Timeline of when each silent defect was found; ten of sixteen cluster into four weeks." width="2360" height="544">
       <figcaption>When each silent defect was found — not when it started. Every one had been true in production for weeks or months. Ten of the sixteen surfaced in a single four-week stretch, once looking became cheap. The sixteenth is still open.</figcaption>
     </figure>
@@ -550,7 +555,7 @@
       <span>I thought we changed that ;ast time?</span>
       <span>why the rule is not active? I though we made it active yesterday</span>
     </div>
-    <figure class="fig-inline">
+    <figure class="fig-inline wide">
       <img src="fig-why.webp" alt="Ninety-one squares, one per investigation: 33 dark red, 49 rose, 9 grey." width="2360" height="536">
       <figcaption>Every investigation in the preserved sessions, and how each one started. All of them were opened by me, not by an agent — and nine in ten are a version of the same question.</figcaption>
     </figure>
