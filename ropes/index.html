@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<title>You Don’t Learn the Ropes, You Build Them</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A journey that began at a remote welfare school in India and finished in London. On automating knowledge work, and software as a non-complaining colleague. First published July 2018.">
+<meta name="author" content="Jagadeesh Gorla">
+<link rel="canonical" href="https://jags-gorla.github.io/essays/ropes/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Jagadeesh Gorla">
+<meta property="og:title" content="You Don’t Learn the Ropes, You Build Them">
+<meta property="og:description" content="A journey that began at a remote welfare school in India and finished in London. First published July 2018.">
+<meta property="og:url" content="https://jags-gorla.github.io/essays/ropes/">
+<meta property="article:published_time" content="2018-07-30">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "You Don’t Learn the Ropes, You Build Them",
+  "alternativeHeadline": "An eventual next step …",
+  "datePublished": "2018-07-30",
+  "author": { "@type": "Person", "name": "Jagadeesh Gorla", "url": "https://jags-gorla.github.io/" },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://jags-gorla.github.io/essays/ropes/" },
+  "isPartOf": { "@type": "Blog", "name": "Notes", "url": "https://jags-gorla.github.io/essays/" },
+  "inLanguage": "en"
+}
+</script>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --paper: #f8f5ef;
+    --rule: #d8d2c4;
+    --muted: #6b6659;
+    --muted-soft: #a49e90;
+    --poster-red: #BC1E2E;
+    --serif: Charter, 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, 'Times New Roman', serif;
+    --display: Charter, 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, 'Times New Roman', serif;
+    --condensed: Impact, 'Haettenschweiler', 'Arial Narrow Bold', 'Franklin Gothic Bold', 'Helvetica Neue Bold Condensed', sans-serif;
+    --mono: 'IBM Plex Mono', 'SF Mono', 'JetBrains Mono', Menlo, Monaco, Consolas, monospace;
+    --measure: 36rem;
+    --wide: 56rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #f0ead9;
+      --paper: #12100c;
+      --rule: #2a2620;
+      --muted: #a49e90;
+      --muted-soft: #55504a;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #f0ead9; --paper: #12100c; --rule: #2a2620; --muted: #a49e90; --muted-soft: #55504a;
+  }
+  :root[data-theme="light"] {
+    --ink: #1a1a1a; --paper: #f8f5ef; --rule: #d8d2c4; --muted: #6b6659; --muted-soft: #a49e90;
+  }
+
+  html { background: var(--paper); }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 18px;
+    line-height: 1.68;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    margin: 0; padding: 0;
+  }
+
+  .page { max-width: var(--wide); margin: 0 auto; padding: 3.5rem 1.5rem 6rem; }
+
+  /* ─── Header ─────────────────────────────────────────── */
+  .masthead {
+    text-align: center;
+    padding: 0 0 2rem;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 3rem;
+  }
+  .eyebrow {
+    font-family: var(--condensed);
+    font-size: 0.82rem;
+    letter-spacing: 0.22em;
+    color: var(--poster-red);
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+  }
+  h1.title {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(2rem, 4.2vw, 3.4rem);
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    margin: 0 auto 1.5rem;
+    max-width: 20ch;
+  }
+  .subtitle {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.15rem;
+    line-height: 1.5;
+    color: var(--muted);
+    max-width: 44rem;
+    margin: 0 auto;
+    text-wrap: balance;
+  }
+  .byline {
+    font-family: var(--condensed);
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-top: 2rem;
+  }
+  .byline .sep { margin: 0 0.6em; color: var(--muted-soft); }
+
+  /* ─── Hero image ─────────────────────────────────────── */
+  .hero {
+    margin: 3rem auto 3.5rem;
+    max-width: var(--measure);
+    padding: 0;
+  }
+  .hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    box-shadow:
+      0 1px 0 rgba(0,0,0,0.06),
+      0 24px 48px -24px rgba(0,0,0,0.38);
+  }
+  .hero figcaption {
+    text-align: center;
+    font-family: var(--condensed);
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-top: 1.1rem;
+  }
+
+  .body .verbatim {
+    margin: 2.4rem 0;
+    padding: 1.2rem 0 1.2rem 1.6rem;
+    border-left: 3px solid var(--rule);
+    font-family: var(--mono, 'IBM Plex Mono', Menlo, monospace);
+    font-size: 0.92rem;
+    line-height: 1.85;
+    color: var(--muted);
+  }
+  .body .verbatim span { display: block; }
+  .fig-inline.wide {
+    width: min(var(--wide), 94vw);
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  .fig-inline {
+    margin: 2.6rem 0 3rem;
+    padding: 0;
+  }
+  .fig-inline img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--rule);
+  }
+  .fig-inline figcaption .src {
+    text-transform: none;
+    letter-spacing: 0.02em;
+    color: var(--muted-soft);
+  }
+  .fig-inline figcaption {
+    font-family: var(--condensed);
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 0.9rem;
+    text-align: center;
+  }
+
+  /* ─── Stat strip ─────────────────────────────────────── */
+  .strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(105px, 1fr));
+    gap: 1.5rem 1.1rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    margin: 2rem auto 3.5rem;
+    max-width: var(--measure);
+  }
+  .stat { text-align: center; font-variant-numeric: tabular-nums; }
+  .stat .n {
+    font-family: var(--mono); font-weight: 500; font-size: 1.35rem;
+    color: var(--ink); display: block; line-height: 1.1;
+  }
+  .stat .l {
+    font-family: var(--condensed); font-size: 0.7rem; letter-spacing: 0.18em;
+    color: var(--muted); text-transform: uppercase; margin-top: 0.5rem;
+    display: block; line-height: 1.3;
+  }
+
+  /* ─── Essay body ─────────────────────────────────────── */
+  .body { max-width: var(--measure); margin: 0 auto; }
+  .body p, .body ul, .body ol { margin: 0 0 1.4em; }
+  .body p { hyphens: auto; }
+  .body ul, .body ol { padding-left: 1.4em; }
+  .body li { margin-bottom: 0.45em; }
+  .body strong { font-weight: 600; }
+  .body em { font-style: italic; }
+  .body code {
+    font-family: var(--mono); font-size: 0.85em;
+    background: rgba(128,128,128,0.12); padding: 0.1em 0.35em; border-radius: 3px;
+  }
+
+  .body .lede {
+    font-size: 1.18rem;
+    line-height: 1.55;
+  }
+  .body .lede + p { margin-top: 1.4em; }
+  .body .dateline {
+    margin: 3.2rem 0 0;
+    text-align: center;
+    font-family: var(--condensed);
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted-soft);
+  }
+  .body hr.sec-break {
+    border: 0;
+    height: 1px;
+    background: var(--rule);
+    width: 4rem;
+    margin: 3rem auto;
+  }
+  .body a {
+    color: var(--ink);
+    text-decoration-color: var(--poster-red);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+  .body a:hover { text-decoration-thickness: 2px; }
+
+  .body h2 {
+    font-family: var(--display); font-weight: 700; font-size: 1.75rem;
+    line-height: 1.15; letter-spacing: -0.005em; text-wrap: balance;
+    margin: 3.5rem 0 1.2rem;
+  }
+  .body h3 {
+    font-family: var(--display); font-weight: 700; font-size: 1.2rem;
+    line-height: 1.25; margin: 2.4rem 0 0.6rem;
+  }
+
+  /* Category section: giant red numeral in margin */
+  .category {
+    margin: 5rem 0 2rem;
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+    gap: 1.5rem;
+    align-items: baseline;
+  }
+  .category .numeral {
+    font-family: var(--condensed); font-weight: 900; font-size: 5.5rem;
+    line-height: 0.85; color: var(--poster-red); text-align: right; letter-spacing: -0.02em;
+  }
+  .category .cat-title {
+    font-family: var(--display); font-weight: 700; font-size: 1.8rem;
+    line-height: 1.1; letter-spacing: -0.005em; margin: 0;
+  }
+  .category .cat-title small {
+    display: block; font-family: var(--serif); font-weight: 400; font-style: italic;
+    font-size: 1.05rem; color: var(--muted); margin-top: 0.5rem; line-height: 1.4;
+  }
+  @media (max-width: 640px) {
+    .category { grid-template-columns: 3.5rem 1fr; gap: 1rem; }
+    .category .numeral { font-size: 3.5rem; }
+  }
+
+  .body blockquote.decision {
+    margin: 2.6rem 0 3rem;
+    padding: 0 0 0 1.6rem;
+    border-left: 4px solid var(--poster-red);
+    font-family: var(--display);
+    font-style: normal;
+    font-size: 1.28rem;
+    line-height: 1.42;
+    color: var(--ink);
+    text-wrap: pretty;
+  }
+  .body blockquote.aside-quote {
+    margin: 2.6rem 0;
+    padding: 0 0 0 1.6rem;
+    border-left: 3px solid var(--poster-red);
+    font-family: var(--display);
+    font-style: normal;
+    font-size: 1.3rem;
+    line-height: 1.45;
+    color: var(--ink);
+    text-wrap: pretty;
+  }
+  .body blockquote {
+    margin: 2rem 0; padding: 0 1.4rem;
+    border-left: 3px solid var(--poster-red);
+    font-style: italic; color: var(--muted); font-size: 1.05rem;
+  }
+
+  .figure { font-family: var(--mono); font-weight: 500; white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+  /* Event log entries in category 3 */
+  .event { margin: 2.2rem 0; padding-top: 1.2rem; border-top: 1px solid var(--rule); }
+  .event h4 {
+    font-family: var(--display); font-weight: 700; font-size: 1.1rem;
+    margin: 0 0 0.5rem; line-height: 1.25; text-wrap: balance;
+  }
+  .event .when {
+    font-family: var(--condensed); font-size: 0.72rem; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 0.35rem;
+  }
+  .event p { margin: 0 0 0.9em; }
+
+
+  /* Tables */
+  .body .table-wrap {
+    max-width: 100%; overflow-x: auto; margin: 2rem 0;
+    border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink);
+  }
+  .body table {
+    width: 100%; border-collapse: collapse;
+    font-variant-numeric: tabular-nums; font-size: 0.9rem; line-height: 1.4;
+  }
+  .body table th {
+    text-align: left; font-family: var(--condensed); font-weight: 700;
+    font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--muted); padding: 0.9rem 0.8rem;
+    border-bottom: 1px solid var(--rule); vertical-align: bottom;
+  }
+  .body table td { padding: 0.65rem 0.8rem; vertical-align: top; border-bottom: 1px solid var(--rule); }
+  .body table tr:last-child td { border-bottom: none; }
+  .body table td.when { font-family: var(--mono); font-size: 0.82rem; white-space: nowrap; color: var(--muted); }
+  .body table td.cost { font-family: var(--mono); font-size: 0.85rem; }
+  .body table td.dur {
+    font-family: var(--condensed); font-size: 0.82rem; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--muted); white-space: nowrap;
+  }
+
+  .pullquote {
+    margin: 3rem auto; max-width: var(--measure); text-align: center;
+    font-family: var(--display); font-style: italic; font-size: 1.35rem;
+    line-height: 1.35; color: var(--ink); text-wrap: balance;
+    padding: 1.5rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+  }
+
+  .colophon {
+    max-width: var(--measure); margin: 5rem auto 0; padding-top: 2rem;
+    border-top: 1px solid var(--rule); font-family: var(--mono);
+    font-size: 0.72rem; line-height: 1.7; color: var(--muted); text-align: center;
+  }
+  .colophon .rule { display: inline-block; margin: 0 0.5em; color: var(--muted-soft); }
+
+  .skip-note {
+    margin: 2.8rem 0 2.6rem; text-align: center; font-size: 0.9rem; font-style: italic;
+    color: var(--muted); line-height: 1.5;
+  }
+  .skip-note a {
+    color: var(--muted); text-decoration: none;
+    border-bottom: 1px solid var(--poster-red); padding-bottom: 1px;
+  }
+  .skip-note a:hover { color: var(--poster-red); }
+  #notes { scroll-margin-top: 2rem; }
+  .backlink {
+    margin: 0 0 2.2rem; font-family: var(--condensed); font-size: 0.7rem;
+    letter-spacing: 0.2em; text-transform: uppercase;
+  }
+  .backlink a { color: var(--muted-soft); text-decoration: none; }
+  .backlink a:hover { color: var(--poster-red); }
+  .sitefoot {
+    margin: 4rem 0 0; padding-top: 1.6rem; border-top: 1px solid var(--rule);
+    text-align: center; font-family: var(--condensed); font-size: 0.7rem;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted-soft);
+  }
+  .sitefoot a { color: var(--muted); text-decoration: none; }
+  .sitefoot a:hover { color: var(--poster-red); }
+  .note {
+    font-size: 0.86em; letter-spacing: 0.14em; color: var(--muted-soft);
+    text-transform: lowercase; font-style: italic;
+  }
+  .fig-inline.fig-small img { max-width: 380px; margin: 0 auto; }
+  .fig-inline.fig-small figcaption { max-width: 30rem; margin-left: auto; margin-right: auto; }
+</style>
+<body>
+<div class="page">
+
+  <p class="backlink"><a href="../">← Notes</a></p>
+
+  <header class="masthead">
+    <div class="eyebrow">Field Notes · Entrepreneurship · <time datetime="2018-07">July 2018</time></div>
+    <h1 class="title">You Don’t Learn the Ropes, You Build Them</h1>
+    <p class="subtitle">An eventual next step …</p>
+    <p class="skip-note">Originally published on <a target="_blank" rel="noopener noreferrer" href="https://medium.com/@jgorla/an-eventual-next-step-e0ff0daa3b75">Medium</a>, July 2018. Republished here unchanged, under a new title.</p>
+  </header>
+
+  <article class="body">
+
+    <p class="lede">A tumultuous beginning isn’t always necessary for a good climax. However, it adds the necessary spices. Therefore, here we go …</p>
+
+    <p>A love of <em>learning</em>, wicked <em>persistence</em> and embracing <em>uncertainty</em> combined with <em>serendipitous encounters</em> helped to shape the journey of my life.</p>
+
+    <p>A journey that began at a remote welfare school in India and finished in London, UK — one of the knowledge capitals of the world. A journey that gave me the English language, a fully funded Masters degree in Computer Science (CS), and a PhD in CS (Search and Machine Learning) — Thanks to British Foreign Office (FCO) and Microsoft Research Cambridge. Moreover, a chance to work with many renowned scientists, respected individuals and an eventual paid job … well, a paycheque until the beginning of entrepreneurial life!</p>
+
+    <p>(Yes, the <em>story</em> does deserves a multipart book series, autobiography or inspirational non-fiction ;-)).</p>
+
+    <p>Eventually, I found myself building a self-sustaining Software-as-a-Service company named Jaggu. Our software automates knowledge tasks, often repetitive, done by humans (e.g., analysts) in organisations. Since the beginning, Jaggu has been built on its revenues. It started with a single person and zero customers, as they often do! As of today, we are a strong team of ten researchers, engineers, and experienced executives (in media, marketing and retail) with some of the world’s largest businesses as our <em>happy</em> customers.</p>
+
+    <figure class="fig-inline fig-small">
+      <img src="school.jpg" alt="Andhra Pradesh Gurukula School, Peddapur — a social welfare school in India." width="480" height="360">
+      <figcaption>Andhra Pradesh Gurukula School (Peddapur), not a highly regarded social welfare school! Many, often unforgettable, bittersweet memories.</figcaption>
+    </figure>
+
+    <h2>Exciting next step …</h2>
+
+    <p>A few months ago, a set of wonderful investors invested <strong>£1.5 million</strong> (<strong>$2.2 million</strong> — $ amount is subjected to <em>hard or soft Brexit!</em>) into the business to help and join us in the next phase of our odyssey.</p>
+
+    <hr class="sec-break">
+
+    <h2>What are we trying to solve, anyway?</h2>
+
+    <p>In today’s digital world, we produce, comprehend and disseminate information around-the-clock — at work, at home and on the move. For example, responding to an email, taking a picture and commenting on social media. The substantial part of the <em>knowledge economy</em> (jobs in the developed economies) is about comprehending this information for <em>creative problem solving</em> and <em>decision making</em>.</p>
+
+    <p>Creative decision making and problem solving often require <em>repeatable</em> complex analysis of the data, extracting the information and making subtle judgements. Traditionally, humans do the fundamental analysis required for creative problem solving. However, over the last decade, the research in machine learning and computation equipped us with powerful tools to automate tasks performed by humans.</p>
+
+    <h3>Imminent automation through Machine Learning</h3>
+
+    <p>Over the last two decades, machines entered into our lives as assistants without any resistance. A simple example is search engines.</p>
+
+    <p>The search engines <em>assist</em> us by providing an ordered list of <em>most likely</em> contents that would satisfy our <em>needs</em> (based on their <em>comprehension</em> of the <em>query</em> and the <em>content</em>). They neither give us the exact answers nor do we expect them to do so.</p>
+
+    <p>Today, we cannot imagine our lives without a search engine. Simply put, a search engine is a glorified assistant designed to <em>organise the world’s information for our needs</em> and we embrace its service!</p>
+
+    <p>At present, there are an estimated 300+ million knowledge workers in the world and the number is growing. Their repetitive work to perform day-to-day tasks has the potential to be automated with machines. If you are using Outlook or Gmail at work, you may not realise it, but you are already being assisted by machines to comprehend and organise your communication, therefore increasing your work efficiency… so why stop there?</p>
+
+    <p>Many of the workers in Knowledge Industries (e.g., marketing insight) are underserved by intelligent software. This is due to the unique tasks performed by the knowledge workers in order to solve their customers problems.</p>
+
+    <h3>Our objective : Software (machines) as a non-complaining colleague</h3>
+
+    <p>Every business has its own set of procedures and solutions to solve their customers problems. Automation of these procedures and solutions through machines would help to accelerate growth and create new opportunities. It would also enable operational efficiency, speed of innovation and a shift in focus to creative problem solving. An intelligent automation software would therefore act as a never tiring assistant!</p>
+
+    <blockquote class="aside-quote">Machines don’t need a human level of intelligence and/or emotion to help grow the business.</blockquote>
+
+    <p>By 2025, it is estimated that the <em>Automation of Knowledge Work</em> will have $5–$7 trillion impact on world economy.</p>
+
+    <p>I have been fortunate enough to be part of the recent revolution in machine learning, and have first-hand experience in building intelligent systems being used by 200+ million customers across three different industries (Gaming, Media and Retail).</p>
+
+    <p>Using our collective experience at Jaggu and our customers feedback, we are determined to build intelligent software to automate repetitive knowledge work. May the journey continue…</p>
+
+    <hr class="sec-break">
+
+    <h2>Final remarks …</h2>
+
+    <p>We are always on a lookout for ambitious researchers and engineers to experience our exciting journey. A taste of what it would be like working with us can be described by slight modification of old British saying (<em>learning the ropes</em>) … <strong>You don’t learn the ropes, you build them!</strong></p>
+
+  </article>
+
+  <p class="sitefoot"><a href="../../">Jagadeesh Gorla</a> · <a href="../">Notes</a> · <a target="_blank" rel="noopener noreferrer" href="https://github.com/jags-gorla">GitHub</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jgorla">LinkedIn</a> · <a target="_blank" rel="noopener noreferrer" href="https://scholar.google.com/citations?user=dM1fbYAAAAAJ&amp;hl=en">Scholar <span class="note">past research</span></a></p>
+
+</div>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="57a669a4-c476-4b46-9c74-af34b86dee80"></script>
+  <script>
+    document.addEventListener('click', function (e) {
+      var el = e.target instanceof Element ? e.target : null;
+      var a = el && el.closest('a[href^="#"]');
+      if (!a) return;
+      var t = document.getElementById(a.getAttribute('href').slice(1));
+      if (!t) return;
+      e.preventDefault();
+      t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  </script>
+  <script defer src="https://jaggu-analytics.jags-gorla.workers.dev/beacon.js"></script>
+</html>
